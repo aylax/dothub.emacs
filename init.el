@@ -50,90 +50,101 @@
 (maybe-require-package 'scratch)
 (require-package 'command-log-mode)
 
+
+;; Framework
 (require 'init-frame-hooks)
+
+
+;; Misc
+(require 'init-misc)
+(require 'init-osx-keys)
+
+
+;; User Session
+(require 'init-recentf)
+(require 'init-sessions)
+
+
+;; Window & Buffer
+(require 'init-mmm)
 (require 'init-xterm)
 (require 'init-themes)
-(require 'init-osx-keys)
-(require 'init-gui-frames)
-(require 'init-dired)
-(require 'init-isearch)
-(require 'init-grep)
-(require 'init-uniquify)
 (require 'init-ibuffer)
-(require 'init-flycheck)
-
-(require 'init-recentf)
+(require 'init-windows)
+(require 'init-uniquify)
+(require 'init-gui-frames)
 (require 'init-minibuffer)
 (require 'init-hippie-expand)
+
+
+;; Navigate & Search
+(require 'init-grep)
+(require 'init-dired)
+(require 'init-isearch)
+(require 'init-projectile)
+
+
+;; Vim Mode
+(require 'init-vim-mode)
+
+
+;; Spelling & Auto Completion
 (require 'init-company)
-(require 'init-windows)
-(require 'init-sessions)
-(require 'init-mmm)
-
-(require 'init-editing-utils)
+(require 'init-flycheck)
 (require 'init-whitespace)
+(require 'init-editing-utils)
+(when *spell-check-support-enabled*
+  (require 'init-spelling))
 
+
+;; Code Version Control
 (require 'init-vc)
 (require 'init-darcs)
 (require 'init-git)
 (require 'init-github)
 
-(require 'init-projectile)
-
-(require 'init-compile)
-(require 'init-crontab)
-(require 'init-textile)
-(require 'init-markdown)
-(require 'init-csv)
-(require 'init-erlang)
-(require 'init-javascript)
-(require 'init-php)
-(require 'init-org)
-(require 'init-nxml)
-(require 'init-html)
-(require 'init-css)
-(require 'init-haml)
-(require 'init-http)
-(require 'init-python)
-(require 'init-haskell)
-(require 'init-elm)
-(require 'init-purescript)
-(require 'init-ruby)
-(require 'init-rails)
+
+;; Basic DevOps
 (require 'init-sql)
-(require 'init-ocaml)
-(require 'init-j)
-(require 'init-nim)
-(require 'init-rust)
-(require 'init-toml)
-(require 'init-yaml)
 (require 'init-docker)
+(require 'init-crontab)
 (require 'init-terraform)
-(require 'init-nix)
 (maybe-require-package 'nginx-mode)
 
-(require 'init-paredit)
+
+;; Markup Language
+(require 'init-csv)
+(require 'init-org)
+(require 'init-toml)
+(require 'init-yaml)
+(require 'init-nxml)
+(require 'init-textile)
+(require 'init-markdown)
+
+
+;; Web Develop Language
+(require 'init-css)
+(require 'init-html)
+(require 'init-http)
+(require 'init-purescript)
+(require 'init-javascript)
+
+
+;; Generic Language
+(require 'init-nix)
+(require 'init-rust)
 (require 'init-lisp)
-(require 'init-slime)
-(require 'init-clojure)
-(require 'init-clojure-cider)
-(require 'init-common-lisp)
+(require 'init-python)
+(require 'init-haskell)
+(require 'init-paredit)
+(require 'init-compile)
 
-(when *spell-check-support-enabled*
-  (require 'init-spelling))
-
-(require 'init-misc)
-
-(require 'init-folding)
-(require 'init-dash)
-
-(require 'init-vim-mode)
-
-;;(require 'init-twitter)
-;; (require 'init-mu)
+
+;; Note Book
 (require 'init-ledger)
-;; Extra packages which don't require any configuration
 
+
+;; Extra packages
 (require-package 'sudo-edit)
 (require-package 'gnuplot)
 (require-package 'lua-mode)
@@ -154,7 +165,6 @@
 (require 'init-direnv)
 
 
-
 ;; Allow access from emacsclient
 (add-hook 'after-init-hook
           (lambda ()
