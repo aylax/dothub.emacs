@@ -127,6 +127,8 @@
 (require 'init-folding)
 (require 'init-dash)
 
+(require 'init-vim-mode)
+
 ;;(require 'init-twitter)
 ;; (require 'init-mu)
 (require 'init-ledger)
@@ -136,6 +138,7 @@
 (require-package 'gnuplot)
 (require-package 'lua-mode)
 (require-package 'htmlize)
+
 (when *is-a-mac*
   (require-package 'osx-location))
 (maybe-require-package 'dotenv-mode)
