@@ -51,41 +51,50 @@
 (require-package 'command-log-mode)
 
 
+;; Framework
 (require 'init-frame-hooks)
+
+
+;; Misc
+(require 'init-misc)
+(require 'init-osx-keys)
+
+
+;; User Session
+(require 'init-recentf)
+(require 'init-sessions)
+
+
+;; Window & Buffer
+(require 'init-mmm)
 (require 'init-xterm)
 (require 'init-themes)
-(require 'init-osx-keys)
-(require 'init-gui-frames)
-(require 'init-dired)
-(require 'init-isearch)
-(require 'init-grep)
-(require 'init-uniquify)
 (require 'init-ibuffer)
-
-(require 'init-recentf)
+(require 'init-windows)
+(require 'init-uniquify)
+(require 'init-gui-frames)
 (require 'init-minibuffer)
 (require 'init-hippie-expand)
-(require 'init-windows)
-(require 'init-sessions)
-(require 'init-mmm)
-(require 'init-misc)
 
+
+;; Navigate & Search
+(require 'init-grep)
+(require 'init-dired)
+(require 'init-isearch)
+(require 'init-projectile)
 
 
 ;; Vim Mode
 (require 'init-vim-mode)
 
 
-;; Auto Completion && Spelling
+;; Spelling & Auto Completion
 (require 'init-company)
 (require 'init-flycheck)
 (require 'init-whitespace)
 (require 'init-editing-utils)
 (when *spell-check-support-enabled*
   (require 'init-spelling))
-
-
-(require 'init-projectile)
 
 
 ;; Code Version Control
