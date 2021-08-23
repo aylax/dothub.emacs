@@ -84,10 +84,6 @@
 (require 'init-projectile)
 
 
-;; Vim Mode
-(require 'init-vim-mode)
-
-
 ;; Spelling & Auto Completion
 (require 'init-company)
 (require 'init-flycheck)
@@ -132,7 +128,6 @@
 
 ;; Generic Language
 (require 'init-nix)
-(require 'init-apl)
 (require 'init-rust)
 (require 'init-lisp)
 (require 'init-python)
