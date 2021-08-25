@@ -1,0 +1,24 @@
+#+title: aylax's emacs
+#+email: zhoubye@foxmail.com
+#+author: aylax zhou
+#+language: en
+#+keywords: git readme orgmode emacs
+
+The repo used to customize emacs confs.
+
+** install
+#+begin_src sh
+  git clone https://github.com/aylax/dothub.emacs ~/.emacs.d
+#+end_src
+
+** usage
+The repo is available as confs which you can load in emacs.
+
+** refs & thanks
+- [[https://github.com/RichardLitt/standard-readme.git][standard readme]]
+- [[https://sites.google.com/site/steveyegge2/effective-emacs][effective emacs]]
+- [[https://github.com/purcell/emacs.d.git][purcell's emacs.d]]
+- [[https://github.com/rose-pine/rose-pine-theme.git][color theme : rose pine]]
+
+** license
+[[https://github.com/aylax/dothub.emacs/blob/master/LICENSE][BSD-3-Clause]] © aylax
