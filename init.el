@@ -15,7 +15,7 @@
 (when (version< emacs-version "26.1")
   (message "Your Emacs is old, and some functionality in this config will be disabled. Please upgrade if possible."))
 
-(add-to-list 'load-path (expand-file-name "profiles" user-emacs-directory))
+(add-to-list 'load-path (locate-user-emacs-file "profiles"))
 (require 'init-benchmarking) ;; Measure startup time
 
 (defconst *spell-check-support-enabled* nil) ;; Enable with t if you prefer
@@ -34,9 +34,9 @@
 ;; Bootstrap config
 
 
-(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+(setq custom-file (locate-user-emacs-file "custom.el"))
 (require 'init-utils)
-(require 'init-pkgs) ;; Must come before elpa, as it may provide package.el
+(require 'init-packages) ;; Must come before elpa, as it may provide package.el
 ;; Calls (package-initialize)
 (require 'init-elpa)      ;; Machinery for installing required packages
 (require 'init-exec-path) ;; Set up $PATH
@@ -70,6 +70,7 @@
 (require 'init-xterm)
 (require 'init-themes)
 (require 'init-ibuffer)
+(require 'init-folding)
 (require 'init-windows)
 (require 'init-uniquify)
 (require 'init-gui-frames)
@@ -141,10 +142,10 @@
 
 
 ;; Extra packages
-(require-package 'sudo-edit)
 (require-package 'gnuplot)
-(require-package 'lua-mode)
 (require-package 'htmlize)
+(require-package 'lua-mode)
+(require-package 'sudo-edit)
 
 (when *is-a-mac*
   (require-package 'osx-location))
