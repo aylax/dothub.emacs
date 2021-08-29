@@ -128,7 +128,7 @@
 
 
 ;; Generic Language
-(require 'init-nix)
+                                        ;(require 'init-nix)
 (require 'init-rust)
 (require 'init-lisp)
 (require 'init-python)
