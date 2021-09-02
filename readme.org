@@ -21,4 +21,4 @@ The repo is available as confs which you can load in emacs.
 - [[https://github.com/rose-pine/rose-pine-theme.git][color theme : rose pine]]
 
 ** license
-[[https://github.com/aylax/dothub.emacs/blob/master/LICENSE][BSD-3-Clause]] © aylax
+BSD-3-Clause © aylax
