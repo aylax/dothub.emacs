@@ -8,7 +8,7 @@ The repo used to customize emacs confs.
 
 ** install
 #+begin_src sh
-  git clone https://github.com/aylax/dothub.emacs ~/.emacs.d
+git clone https://github.com/aylax/dothub.emacs ~/.emacs.d
 #+end_src
 
 ** usage
